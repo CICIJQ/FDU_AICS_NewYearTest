@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>2026 码农马型人格测试 | 复旦计院新年特别版</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- 封面页 -->
+        <div id="page-home" class="page active">
+            <div class="circuit-bg"></div>
+            <div class="content">
+                <div class="header">
+                    <span class="badge">2026 乙巳马年</span>
+                    <h1>码农马型人格</h1>
+                    <p class="subtitle">计算与智能创新学院 · 2026 春节特别版</p>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-hotspot" onclick="startQuiz()" aria-label="进入测试"></div>
+                </div>
+                <div class="description">
+                    代码千万行，马年第一行。<br>
+                    测测你的系统架构与马年运势。
+                </div>
+                <button class="btn btn-primary" onclick="startQuiz()">开始编译人格</button>
+            </div>
+        </div>
+
+        <!-- 答题页 -->
+        <div id="page-quiz" class="page">
+            <div class="quiz-header">
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="progress-text" id="progress-text">1/6</div>
+            </div>
+            <div class="question-container">
+                <h2 id="question-title">题目加载中...</h2>
+                <div id="options-list" class="options-list"></div>
+            </div>
+            <div class="quiz-footer">
+                <button class="btn btn-outline" id="btn-prev" onclick="prevQuestion()" style="display: none;">返回上一题</button>
+                <button class="btn btn-primary" id="btn-next" style="display: none;">确认并继续</button>
+            </div>
+        </div>
+
+        <!-- Loading 页 -->
+        <div id="page-loading" class="page">
+            <div class="loading-content">
+                <p id="loading-text" class="loading-text">正在编译你的AI架构人格...</p>
+                <div class="loading-bar" aria-label="Loading progress">
+                    <div class="loading-bar-fill"></div>
+                </div>
+                <div class="console-text">
+                    > Initializing kernel...<br>
+                    > Loading neural networks...<br>
+                    > Optimizing parameters...
+                </div>
+            </div>
+        </div>
+
+        <!-- 昵称页 -->
+        <div id="page-nickname" class="page">
+            <div class="nickname-card">
+                <div class="nickname-title">给你的测试结果签个名</div>
+                <div class="nickname-subtitle">输入昵称</div>
+                <input id="nickname-input" class="nickname-input" type="text" maxlength="6" placeholder="如：工程狮" />
+                <div class="nickname-actions">
+                    <button class="btn btn-primary" id="btn-nickname-continue">查看结果</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 结果页 -->
+        <div id="page-result" class="page">
+            <div class="result-bg">
+                <button class="result-restart" onclick="restartQuiz()">重新测试</button>
+                <div class="result-text">
+                    <div id="res-nickname" class="res-value res-nickname"></div>
+                    <div id="res-horse-type" class="res-value res-title"></div>
+                    <div id="res-desc" class="res-value res-desc"></div>
+
+                    <div id="res-llm" class="res-value res-llm"></div>
+
+                    <div id="res-wish" class="res-value res-wish"></div>
+
+                    <div id="res-sys-feature" class="res-hidden"></div>
+                    <div id="res-advantage" class="res-hidden"></div>
+                    <div id="res-warning" class="res-hidden"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="bgm" src="assets/bgm.mp3" loop preload="auto"></audio>
+    <script src="main.js"></script>
+</body>
+</html>
