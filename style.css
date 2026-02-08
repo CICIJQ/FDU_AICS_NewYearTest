@@ -4,6 +4,7 @@
     --dark-bg: #1a1a1a;
     --card-white: #fdfdfd;
     --text-main: #333;
+    --result-scale: 0.7;
 }
 
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -301,7 +302,7 @@ h1 { font-size: 2.2rem; margin: 15px 0 5px; letter-spacing: 2px; }
     border: 1px solid rgba(255,255,255,0.6);
     background: rgba(0,0,0,0.35);
     color: #eee;
-    font-size: 0.9rem;
+    font-size: calc(0.9rem * var(--result-scale));
     cursor: pointer;
     z-index: 2;
 }
@@ -322,26 +323,26 @@ h1 { font-size: 2.2rem; margin: 15px 0 5px; letter-spacing: 2px; }
 .res-label { /* 结果页标签（如“本命大模型/新年建议”） */
     position: absolute;
     left: 6%; /* 标签左边距 */
-    font-size: 1.45rem; /* 标签字号 */
+    font-size: calc(1.45rem * var(--result-scale)); /* 标签字号 */
     letter-spacing: 1px; /* 标签字间距 */
 }
 .res-value { /* 结果页正文基础样式（标题/模型/建议等） */
     position: absolute;
     left: 6%; /* 正文左边距 */
     width: 84%; /* 正文宽度 */
-    font-size: 1.45rem; /* 正文字号 */
+    font-size: calc(1.45rem * var(--result-scale)); /* 正文字号 */
 }
 .res-label-title { top: 26%; } /* “人格标签”位置 */
 .res-title { top: 24%; } /* 人格标题位置 */
 .res-desc {
     top: 28%; /* 人格描述位置 */
-    font-size: 1.3rem; /* 人格描述字号 */
+    font-size: calc(1.3rem * var(--result-scale)); /* 人格描述字号 */
     line-height: 1.6; /* 人格描述行间距 */
     font-weight: 600; /* 人格描述字重 */
 }
 .res-nickname {
     top: 5%; /* 昵称距顶部位置 */
-    font-size: 2.8rem; /* 昵称字号 */
+    font-size: calc(2.8rem * var(--result-scale)); /* 昵称字号 */
     text-align: left; /* 昵称左对齐 */
     width: 60%; /* 昵称宽度 */
     left: 26%; /* 昵称左侧起始位置 */
@@ -356,7 +357,7 @@ h1 { font-size: 2.2rem; margin: 15px 0 5px; letter-spacing: 2px; }
     top: 54%; /* 新年建议正文位置 */
     left: 6%; /* 新年建议左边距 */
     width: 88%; /* 新年建议宽度 */
-    font-size: 1.45rem; /* 新年建议字号 */
+    font-size: calc(1.45rem * var(--result-scale)); /* 新年建议字号 */
     line-height: 1.85; /* 新年建议行间距 */
     font-weight: 600; /* 新年建议字重 */
 }
