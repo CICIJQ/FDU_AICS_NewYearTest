@@ -61,7 +61,7 @@ const questions = [
         title: "7. 面对 ddl，你更倾向于：",
         options: [
             { text: "A. 两周前就开始拆任务", mbti: { J: 2, T: 1 }, arch: { strongly_consistent: 1 } },
-            { text: "B. 一个晚上，一台电脑，一个AI，创造一个奇迹）", mbti: { P: 2, E: 1 }, arch: { low_latency: 1, event_driven: 1 } },
+            { text: "B. 一个晚上，一台电脑，一个AI，创造一个奇迹", mbti: { P: 2, E: 1 }, arch: { low_latency: 1, event_driven: 1 } },
             { text: "C. 看情况，如果是喜欢的内容就早做", mbti: { N: 1, F: 1 }, arch: { eventual_consistent: 1 } },
             { text: "D. 先找 AI 问问这活有没有最短路径", mbti: { T: 1, P: 1 }, arch: { microservices: 1 } }
         ]
