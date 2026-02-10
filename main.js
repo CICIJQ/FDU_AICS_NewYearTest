@@ -3,7 +3,7 @@
 // ==============================
 const questions = [
     {
-        title: "1. 过去一年中，你的精神状态被诊断为？（多选）",
+        title: "1. 回顾过去一年，你的精神状态被诊断为？（多选）",
         multi: true,
         options: [
             {
@@ -29,7 +29,183 @@ const questions = [
         ]
     },
     {
-        title: "2. 身为“马”农，你可能对AI常说的提示词是？（多选）",
+        title: "2. 春节假期正式开始，你的宅家日常更像？",
+        options: [
+            {
+                text: "A. 马不停蹄外出社交，聚会摸牌不停歇",
+                mbti: { E: 1, S: 1, P: 1 },
+                arch: { microservices: 1, event_driven: 1 }
+            },
+            {
+                text: "B. 家人唠嗑雨我无瓜，默默窝角落看论文",
+                mbti: { I: 1, N: 1, J: 1 },
+                arch: { high_availability: 1 }
+            },
+            {
+                text: "C. 看剧打游戏，拒绝生产学术垃圾",
+                mbti: { I: 1, P: 1 },
+                arch: { low_latency: 1 }
+            },
+            {
+                text: "D. 购物扫尘装路由，主动干活改造全家",
+                mbti: { E: 1, S: 1, T: 1, J: 1 },
+                arch: { monolith: 1, strongly_consistent: 1 }
+            }
+        ]
+    },
+    {
+        title: "3. 家族群突然下起红包雨，你的第一反应是？",
+        options: [
+            {
+                text: "A. 手指悬停紧盯屏幕，马上到账无延迟",
+                mbti: { T: 1, P: 1 },
+                arch: { low_latency: 1 }
+            },
+            {
+                text: "B. 开启智能红包提醒，高效灵活又躺赢",
+                mbti: { T: 1, J: 1 },
+                arch: { high_availability: 1 }
+            },
+            {
+                text: "C. 边抢边陪长辈唠嗑，\"马年吉祥！抢到红包分您一半！\"",
+                mbti: { E: 1, F: 1 },
+                arch: { event_driven: 1 }
+            },
+            {
+                text: "D. 年夜饭后再悠哉捡漏，缘分到了自然有",
+                mbti: { I: 1, P: 1 },
+                arch: { eventual_consistent: 1 }
+            }
+        ]
+    },
+    {
+        title: "4. 年夜饭开始了，有亲戚问起\"你平时怎么搞 AI 的\"，你会？",
+        options: [
+            {
+                text: "A. 马上现场演示，热情科普 AI 怎么用",
+                mbti: { E: 1, N: 1 },
+                arch: { event_driven: 1, microservices: 1 }
+            },
+            {
+                text: "B. 接个闹铃假装在忙，火速撤离饭桌",
+                mbti: { I: 1, S: 1 },
+                arch: { low_latency: 1 }
+            },
+            {
+                text: "C. 严谨介绍学习方向，专业名词头头是道",
+                mbti: { T: 1, J: 1 },
+                arch: { strongly_consistent: 1 }
+            },
+            {
+                text: "D. 推上几个链接，埋头苦吃不较真",
+                mbti: { F: 1, P: 1 },
+                arch: { eventual_consistent: 1 }
+            }
+        ]
+    },
+    {
+        title: "5. 大姨听了你的介绍非常高兴，塞来大红包。你会把压岁钱的第一笔支出用在？",
+        options: [
+            {
+                text: "A. “码”力投资，买课买设备，蓄力技术升级",
+                mbti: { J: 1, T: 1 },
+                arch: { strongly_consistent: 1 }
+            },
+            {
+                text: "B. 马上组局！拉群约饭约桌游，社交能量拉满",
+                mbti: { E: 1, F: 1, P: 1 },
+                arch: { event_driven: 1 }
+            },
+            {
+                text: "C. 进账存入小金库，静待刚需再启封",
+                mbti: { I: 1, J: 1 },
+                arch: { high_availability: 1 }
+            },
+            {
+                text: "D. 买下新键盘新相机，情绪价值 + 10086",
+                mbti: { P: 1, F: 1 },
+                arch: { low_latency: 1 }
+            }
+        ]
+    },
+    {
+        title: "6. 表姐约你逛庙会买马蹄酥，发现长队排到了街口，你会？",
+        options: [
+            {
+                text: "A. 老实排队，边刷攻略边等候，秩序就是安全感",
+                mbti: { J: 1, T: 1 },
+                arch: { strongly_consistent: 1 }
+            },
+            {
+                text: "B. 换马不换路，买个糖画做平替，灵活应变不内耗",
+                mbti: { P: 1, F: 1 },
+                arch: { eventual_consistent: 1 }
+            },
+            {
+                text: "C. 请表姐当\"马前卒\"，约定\"排到了喊我\"",
+                mbti: { E: 1, S: 1 },
+                arch: { microservices: 1 }
+            },
+            {
+                text: "D. 先逛逛庙会，返程时看队伍长短再决定",
+                mbti: { I: 1, P: 1 },
+                arch: { high_availability: 1 }
+            }
+        ]
+    },
+    {
+        title: "7. 今年你负责贴马年窗花，你的操作方式是？（多选）",
+        multi: true,
+        options: [
+            {
+                text: "A. 强迫症美学，尺子+水平仪双校准，各个窗花要对齐",
+                mbti: { J: 1, T: 1 },
+                arch: { strongly_consistent: 1 }
+            },
+            {
+                text: "B. 先贴一版再看效果，反复重贴触发迭代",
+                mbti: { P: 1, N: 1 },
+                arch: { event_driven: 1 }
+            },
+            {
+                text: "C. 客厅\"奔马迎春\"、卧室\"小马纳福\"、厨房\"福马安康\"，凌乱又热闹",
+                mbti: { E: 1, S: 1 },
+                arch: { microservices: 1 }
+            },
+            {
+                text: "D. 房间 C 位贴张\"马到成功\"，拒绝过度设计",
+                mbti: { I: 1, T: 1 },
+                arch: { monolith: 1 }
+            }
+        ]
+    },
+    {
+        title: "8. 假期中途偶遇工作任务+1，你的完成姿态是？",
+        options: [
+            {
+                text: "A. 接到工作就开干，进度稳如老马识途",
+                mbti: { J: 2, T: 1 },
+                arch: { strongly_consistent: 1 }
+            },
+            {
+                text: "B. DDL前马力全开，一个夜晚一台电脑，创造奇迹",
+                mbti: { P: 2, E: 1 },
+                arch: { low_latency: 1, event_driven: 1 }
+            },
+            {
+                text: "C. 喜欢的项目马不停蹄，无感的项目马马虎虎",
+                mbti: { N: 1, F: 1 },
+                arch: { eventual_consistent: 1 }
+            },
+            {
+                text: "D. 选择性下线，一切工作节后再说",
+                mbti: { I: 1, P: 1 },
+                arch: { eventual_consistent: 1 }
+            }
+        ]
+    },
+    {
+        title: "9. 为了尽快做完工作，身为“马”农，你最常对AI说的提示词是？（多选）",
         multi: true,
         options: [
             {
@@ -59,8 +235,9 @@ const questions = [
             }
         ]
     },
+    
     {
-        title: "3. 打开 GitHub，注释区画风通常是？",
+        title: "10. 工作中途你打开了自己的 GitHub 仓库，发现注释区的画风通常是？",
         options: [
             {
                 text: "A.「马首是瞻」严格按逻辑写注释，详细又清晰",
@@ -85,183 +262,7 @@ const questions = [
         ]
     },
     {
-        title: "4. 假期偶遇工作任务+1，你的完成姿态是？",
-        options: [
-            {
-                text: "A. 提前两周拆项目，进度稳如老马识途",
-                mbti: { J: 2, T: 1 },
-                arch: { strongly_consistent: 1 }
-            },
-            {
-                text: "B. DDL前马力全开，一个夜晚一台电脑，创造奇迹",
-                mbti: { P: 2, E: 1 },
-                arch: { low_latency: 1, event_driven: 1 }
-            },
-            {
-                text: "C. 喜欢的项目马不停蹄，无感的项目马马虎虎",
-                mbti: { N: 1, F: 1 },
-                arch: { eventual_consistent: 1 }
-            },
-            {
-                text: "D. 选择性下线，一切工作节后再说",
-                mbti: { I: 1, P: 1 },
-                arch: { eventual_consistent: 1 }
-            }
-        ]
-    },
-    {
-        title: "5. 庙会\"马蹄酥\"的长队排到了街口，你会？",
-        options: [
-            {
-                text: "A. 老实排队，边刷攻略边等候，秩序就是安全感",
-                mbti: { J: 1, T: 1 },
-                arch: { strongly_consistent: 1 }
-            },
-            {
-                text: "B. 换马不换路，买个糖画做平替，灵活应变不内耗",
-                mbti: { P: 1, F: 1 },
-                arch: { eventual_consistent: 1 }
-            },
-            {
-                text: "C. 请朋友当\"马前卒\"，约定\"排到了喊我\"",
-                mbti: { E: 1, S: 1 },
-                arch: { microservices: 1 }
-            },
-            {
-                text: "D. 先逛逛庙会，返程时看队伍长短再决定",
-                mbti: { I: 1, P: 1 },
-                arch: { high_availability: 1 }
-            }
-        ]
-    },
-    {
-        title: "6. 贴马年窗花，你选择的模式是？（多选）",
-        multi: true,
-        options: [
-            {
-                text: "A. 强迫症美学，尺子+水平仪双校准，各个窗花要对齐",
-                mbti: { J: 1, T: 1 },
-                arch: { strongly_consistent: 1 }
-            },
-            {
-                text: "B. 先贴一版再看效果，反复重贴触发迭代",
-                mbti: { P: 1, N: 1 },
-                arch: { event_driven: 1 }
-            },
-            {
-                text: "C. 客厅\"奔马迎春\"、卧室\"小马纳福\"、厨房\"福马安康\"，凌乱又热闹",
-                mbti: { E: 1, S: 1 },
-                arch: { microservices: 1 }
-            },
-            {
-                text: "D. 房间 C 位贴张\"马到成功\"，拒绝过度设计",
-                mbti: { I: 1, T: 1 },
-                arch: { monolith: 1 }
-            }
-        ]
-    },
-    {
-        title: "7. 家族群发了红包雨，你的策略是？",
-        options: [
-            {
-                text: "A. 手指悬停紧盯屏幕，马上到账无延迟",
-                mbti: { T: 1, P: 1 },
-                arch: { low_latency: 1 }
-            },
-            {
-                text: "B. 开启智能红包提醒，高效灵活又躺赢",
-                mbti: { T: 1, J: 1 },
-                arch: { high_availability: 1 }
-            },
-            {
-                text: "C. 边抢边陪长辈唠嗑，\"马年吉祥！抢到红包分您一半！\"",
-                mbti: { E: 1, F: 1 },
-                arch: { event_driven: 1 }
-            },
-            {
-                text: "D. 年夜饭后再悠哉捡漏，缘分到了自然有",
-                mbti: { I: 1, P: 1 },
-                arch: { eventual_consistent: 1 }
-            }
-        ]
-    },
-    {
-        title: "8. 收到红包里的满满压岁钱，你会？",
-        options: [
-            {
-                text: "A. “码”力投资，买课买设备，蓄力技术升级",
-                mbti: { J: 1, T: 1 },
-                arch: { strongly_consistent: 1 }
-            },
-            {
-                text: "B. 马上组局！拉群约饭约桌游，社交能量拉满",
-                mbti: { E: 1, F: 1, P: 1 },
-                arch: { event_driven: 1 }
-            },
-            {
-                text: "C. 进账存入小金库，静待刚需再启封",
-                mbti: { I: 1, J: 1 },
-                arch: { high_availability: 1 }
-            },
-            {
-                text: "D. 买下新键盘新相机，情绪价值 + 10086",
-                mbti: { P: 1, F: 1 },
-                arch: { low_latency: 1 }
-            }
-        ]
-    },
-    {
-        title: "9. 亲戚问起\"你是怎么搞 AI 的\"，你的反应是？",
-        options: [
-            {
-                text: "A. 马上现场演示，热情科普 AI 怎么用",
-                mbti: { E: 1, N: 1 },
-                arch: { event_driven: 1, microservices: 1 }
-            },
-            {
-                text: "B. 接个闹铃假装在忙，火速撤离现场",
-                mbti: { I: 1, S: 1 },
-                arch: { low_latency: 1 }
-            },
-            {
-                text: "C. 严谨介绍学习方向，各类专业名词头头是道",
-                mbti: { T: 1, J: 1 },
-                arch: { strongly_consistent: 1 }
-            },
-            {
-                text: "D. 推上几个链接，马虎过去不较真",
-                mbti: { F: 1, P: 1 },
-                arch: { eventual_consistent: 1 }
-            }
-        ]
-    },
-    {
-        title: "10. 春节，你的宅家日常更像？",
-        options: [
-            {
-                text: "A. 马不停蹄外出社交，聚会摸牌不停歇",
-                mbti: { E: 1, S: 1, P: 1 },
-                arch: { microservices: 1, event_driven: 1 }
-            },
-            {
-                text: "B. 家人唠嗑雨我无瓜，默默窝角落看论文",
-                mbti: { I: 1, N: 1, J: 1 },
-                arch: { high_availability: 1 }
-            },
-            {
-                text: "C. 看剧打游戏，拒绝生产学术垃圾",
-                mbti: { I: 1, P: 1 },
-                arch: { low_latency: 1 }
-            },
-            {
-                text: "D. 购物扫尘装路由，主动干活改造全家",
-                mbti: { E: 1, S: 1, T: 1, J: 1 },
-                arch: { monolith: 1, strongly_consistent: 1 }
-            }
-        ]
-    },
-    {
-        title: "11. 2026，你最想解锁哪种“马”力状态？",
+        title: "11. 展望丙午马年，你最想解锁哪种“马”力状态？",
         options: [
             {
                 text: "A. 马到成功，刻苦钻研项目课题，稳稳落地接paper",
